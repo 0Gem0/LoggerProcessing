@@ -104,14 +104,14 @@ public class LoggerProcessing
             while (line != null){
                 String[] parts = line.split(" ");
                 String userFrom = parts[2];
-                Path userPath = Paths.get(DEST_PATH + "/" + userFrom);
+                Path userPath = Paths.get(DEST_PATH + "/" + userFrom + ".log");
                 Files.write(userPath, (line + "\n").getBytes(StandardCharsets.UTF_8),StandardOpenOption.CREATE, StandardOpenOption.APPEND);
                 if (line.contains("transferred")){
                     String date = parts[0];
                     String time = parts[1];
                     String userTo = parts[parts.length - 1];
                     String money = parts[4];
-                    Path toUserPath = Paths.get(DEST_PATH + "/" + userTo);
+                    Path toUserPath = Paths.get(DEST_PATH + "/" + userTo + ".log");
                     String toLine = date + " " + time + " " + userTo + " received " + money + " from " + userFrom + "\n";
                     Files.write(toUserPath, toLine.getBytes(StandardCharsets.UTF_8),StandardOpenOption.CREATE, StandardOpenOption.APPEND);
                 }
