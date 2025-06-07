@@ -1,0 +1,6 @@
+[2025-05-10 09:03:23] user003 balance inquiry 1000
+[2025-05-10 09:09:00] user003 transferred 120.00 to user004
+[2025-05-10 10:15:56] user003 withdrew 500
+[2025-05-10 10:16:23] user004 balance inquiry 500
+[2025-05-10 11:15:23] user005 balance inquiry 500
+[2025-05-10 11:16:23] user004 transferred 120.00 to user005
